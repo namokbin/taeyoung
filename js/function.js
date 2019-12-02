@@ -148,31 +148,32 @@ $(function(){
         $slides.eq(nowIdx).stop().fadeIn(1000).addClass('on'); //이번에 나타날 슬라이드가 나타남 
     }
 
-    function nextIdx() {
-        if (nowIdx < 3) {
+    function nextIdx(){
+        if(nowIdx<3){
             nowIdx++;
-        } else {
-            nowIdx = 0;
+        }else{
+            nowIdx=0;
         }
     }
-
+    
     //autoplay
-    intervalKey = setInterval(function () {
+    intervalKey=setInterval(function(){
         nextIdx();
         slideMove();
-    }, 2000);
+    },2000);
 
-    $indicator.on('click', function (evt) {
+    $indicator.on('click',function(evt){
+        evt.preventDefault();
+        
         clearInterval(intervalKey);
-        nowIdx = $indicator.index(this);
+        nowIdx=$indicator.index(this);
         slideMove();
-    }); //$indicator 클릭이벤트
-
+    });
 });
 
 //#business-wrap slide 이벤트
 $(function(){
-    var $container =$("#business-wrap>.business-slides>.slides-container");
+    var $container=$("#business-wrap>.business-slides>.slides-container");
     var $btnPrev=$("#business-wrap .slide-controls>a.prev");
     var $btnNext=$("#business-wrap .slide-controls>a.next");
     var $page=$("#business-wrap .slide-page>ol>li");
@@ -204,11 +205,11 @@ $(function(){
             nowIdx=6;
         }
         pageMove();
-        counter().text(nowIdx+1);
+        counter();
     });
 
     $btnNext.on("click",function(evt){
-        console.log("li의 width = ",-$container.find("li").width())
+        // console.log("li의 width = ",-$container.find("li").width())
         evt.preventDefault();
 
         $container.stop().animate({
@@ -224,7 +225,7 @@ $(function(){
             nowIdx=0;
         }
         pageMove();
-        counter().text(nowIdx+1);
+        counter();
     });
 });
 

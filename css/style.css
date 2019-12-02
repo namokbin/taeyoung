@@ -145,7 +145,7 @@ header .toggle_btn.on>a{background-image: url(../images/toggle_icon02.png);}
 #news-wrap>table>tbody>tr>td .news-list>.news-view{float: right; display: block; width:18px; height:36px; margin:32px 30px 0 0 ; cursor: pointer; background-image: url(../images/news_arrow_btn.png);}
 
 #news-wrap>.more-view{width:136px ; height: 48px; margin: 30px auto 0;}
-#news-wrap>.more-view>a{display: block; width:136px ; height: 48px; color: #3a3a3a; font-size: 16px; line-height: 48px; text-align: center; border: 1px solid #3a3a3a; }
+#news-wrap>.more-view>button{display: block; width:136px ; height: 48px; color: #3a3a3a; font-size: 16px; line-height: 48px; text-align: center; background-color:#fff;  border: 1px solid #3a3a3a; }
 /* #news-wrap */
 
 #brandsns-wrap{height: 660px; padding:80px 0 0px; background-color: #f3f3f3; }
