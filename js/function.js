@@ -1,3 +1,9 @@
+$(function(){
+    $("a").on("click",function(evt){
+        evt.preventDefault();
+    });
+});
+
 //header와 scolltop버튼 이벤트
 $(function(){
     $(window).on("scroll",function(){
